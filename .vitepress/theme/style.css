@@ -1,0 +1,101 @@
+/**
+ * Customize default theme styling by overriding CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+/**
+ * Colors
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-c-brand: rgb(76, 103, 209);
+    --vp-c-brand-light: rgb(85, 113, 220);
+    --vp-c-brand-lighter: rgb(96, 126, 234);
+    --vp-c-brand-lightest: rgb(107, 139, 248);
+    --vp-c-brand-dark: hsl(215, 65%, 49%);
+    --vp-c-brand-darker: hsl(215, 65%, 49%);
+    --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
+}
+
+.dark {
+    --vp-c-bg: rgb(20, 20, 22);
+    --vp-c-bg-light: rgb(35, 35, 35);
+    --vp-c-bg-lighter: rgb(41, 41, 44);
+    --vp-c-bg-lightest: rgb(26, 26, 26);
+}
+
+.light {
+    --vp-c-bg: rgb(255, 255, 255);
+    --vp-c-bg-light: rgb(245, 245, 245);
+    --vp-c-bg-lighter: rgb(235, 235, 235);
+    --vp-c-bg-lightest: rgb(225, 225, 225);
+}
+
+/**
+ * Component: Button
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-button-brand-border: var(--vp-c-brand-light);
+    --vp-button-brand-text: var(--vp-c-white);
+    --vp-button-brand-bg: var(--vp-c-brand);
+    --vp-button-brand-hover-border: var(--vp-c-brand-light);
+    --vp-button-brand-hover-text: var(--vp-c-white);
+    --vp-button-brand-hover-bg: var(--vp-c-brand-light);
+    --vp-button-brand-active-border: var(--vp-c-brand-light);
+    --vp-button-brand-active-text: var(--vp-c-white);
+    --vp-button-brand-active-bg: var(--vp-button-brand-bg);
+}
+
+.VPButton.brand {
+    background: linear-gradient(340deg, rgb(255, 0, 132), rgb(44, 112, 208)) !important;
+    border: none !important;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.VPButton.brand:hover {
+    opacity: 0.8;
+}
+
+/**
+ * Component: Home
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-home-hero-name-color: var(--vp-c-text);
+    --vp-home-hero-image-filter: blur(40px);
+}
+
+@media (min-width: 640px) {
+    :root {
+        --vp-home-hero-image-filter: blur(56px);
+    }
+}
+
+@media (min-width: 960px) {
+    :root {
+        --vp-home-hero-image-filter: blur(72px);
+    }
+}
+
+/**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+
+:root {
+    --vp-custom-block-tip-border: var(--vp-c-brand);
+    --vp-custom-block-tip-text: var(--vp-c-brand-darker);
+    --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+.dark {
+    --vp-custom-block-tip-border: var(--vp-c-brand);
+    --vp-custom-block-tip-text: var(--vp-c-brand-lightest);
+    --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
+}
+
+.VPHome .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

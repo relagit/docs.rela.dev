@@ -1,0 +1,12 @@
+{
+    "name": "rela-docs",
+    "scripts": {
+        "dev": "vitepress dev",
+        "build": "vitepress build",
+        "preview": "vitepress preview"
+    },
+    "devDependencies": {
+        "vitepress": "1.0.0-alpha.73",
+        "vue": "^3.2.47"
+    }
+}
